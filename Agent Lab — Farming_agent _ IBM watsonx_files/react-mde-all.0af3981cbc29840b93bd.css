@@ -1,0 +1,1175 @@
+@charset "UTF-8";
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2024. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2024. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2024. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+.mde-header {
+  background-color: var(--cds-ui-01);
+  margin-bottom: 16px;
+}
+.mde-header button:focus {
+  outline: 2px var(--cds-focus) solid;
+}
+.mde-header ul.mde-header-group {
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+}
+.mde-header ul.mde-header-group li.mde-header-item {
+  display: inline-block;
+  position: relative;
+  margin: 0 4px;
+}
+.mde-header ul.mde-header-group li.mde-header-item button {
+  text-align: left;
+  cursor: pointer;
+  padding: 4px;
+  margin: 0;
+  border: none;
+  background: none;
+  color: #242729;
+  margin-top: 5px;
+}
+@keyframes tooltip-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.mde-header ul.mde-header-group li.mde-header-item button:first-child {
+  padding-left: 0;
+}
+.mde-header ul.mde-header-group li.mde-header-item button.tooltipped:hover::before {
+  animation-name: tooltip-appear;
+  animation-duration: 0.2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  position: absolute;
+  z-index: 1000001;
+  width: 0;
+  height: 0;
+  color: rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  content: "";
+  border: 5px solid transparent;
+  top: -5px;
+  right: 50%;
+  bottom: auto;
+  margin-right: -5px;
+  border-top-color: rgba(0, 0, 0, 0.8);
+}
+.mde-header ul.mde-header-group li.mde-header-item button.tooltipped:hover::after {
+  animation-name: tooltip-appear;
+  animation-duration: 0.2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  font-size: 11px;
+  opacity: 0;
+  position: absolute;
+  z-index: 1000000;
+  padding: 5px 8px;
+  color: var(--cds-ui-01);
+  pointer-events: none;
+  content: attr(aria-label);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  right: 50%;
+  bottom: 100%;
+  transform: translateX(50%);
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+.mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown {
+  position: absolute;
+  left: -24px;
+  top: 40px;
+  background-color: white;
+  border: 1px solid #c8ccd0;
+  padding: 9px;
+  z-index: 2;
+  transform: translateX(-9px);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li {
+  margin: 0;
+  white-space: nowrap;
+  list-style: none;
+  display: block;
+  margin-left: -9px;
+  margin-right: -9px;
+  padding: 2px;
+}
+.mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li:hover {
+  background: var(--cds-background-brand);
+}
+.mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button {
+  display: block;
+}
+.mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button p {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1em;
+  background: none;
+  border: 0;
+  text-align: left;
+}
+.mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button p:hover {
+  color: #F5F7fA;
+}
+.mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button p.header-1 {
+  height: 25px !important;
+  font-size: 20px !important;
+  font-weight: 300 !important;
+}
+.mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button p.header-2 {
+  height: 23px !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
+.mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button p.header-3 {
+  height: 20px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+.mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button p.header-4 {
+  height: 18px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+.mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+  top: -16px;
+  left: 50px;
+  transform: translateX(50%);
+}
+.mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-color: white;
+  top: -14px;
+  left: 52px;
+  transform: translateX(50%);
+}
+.mde-header .editDisplayButton.active {
+  height: 18px !important;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--cds-background-brand) !important;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-bottom: 2px solid !important;
+  border-bottom-width: 2px !important;
+  border-bottom-color: var(--cds-background-brand) !important;
+  padding-bottom: 24px !important;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  width: 125px;
+  text-align: center !important;
+  margin-left: -11px !important;
+  padding-left: 3px !important;
+  margin-right: -6px !important;
+}
+.mde-header .editDisplayButton {
+  height: 18px !important;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--cds-text-01) !important;
+  cursor: pointer;
+  width: 125px;
+  text-align: center !important;
+}
+.mde-header .editDisplayButton.focus {
+  outline: 2px var(--cds-focus) solid;
+}
+.mde-header .previewDisplayButton {
+  height: 18px !important;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--cds-text-01) !important;
+  cursor: pointer;
+  width: 125px;
+  text-align: center !important;
+}
+.mde-header .previewDisplayButton.active {
+  height: 18px !important;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--cds-background-brand) !important;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-bottom: 2px solid !important;
+  border-bottom-width: 2px !important;
+  border-bottom-color: var(--cds-background-brand) !important;
+  padding-bottom: 24px !important;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  width: 125px;
+  text-align: center !important;
+}
+.mde-header .previewDisplayButton.focus {
+  outline: 2px var(--cds-focus) solid;
+}
+.mde-header img {
+  height: 18px;
+  margin-top: 3px;
+}
+.mde-header .unorderedListImage,
+.mde-header .taskListImage,
+.mde-header .orderedListImage {
+  height: 16px;
+  margin-top: 4px;
+}
+.mde-header .boldImage,
+.mde-header .italicImage,
+.mde-header .subImage {
+  margin-bottom: -4px;
+  height: 22px;
+}
+.mde-header .italicImage {
+  margin-left: -1px;
+  margin-right: -1px;
+}
+.mde-header .quoteImage,
+.mde-header .codeImage {
+  margin-bottom: -3px;
+  margin-top: 4px;
+}
+.mde-header .headerImage {
+  height: 21px;
+  margin-bottom: -4px;
+}
+.mde-header .carbonCarrat {
+  margin-left: 7px;
+}
+.mde-header .carbonCarrat > path {
+  fill: var(--cds-background-brand) !important;
+}
+.mde-header button:disabled,
+.mde-header button[disabled] {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.mde-header > .mde-header-group ~ .mde-header-group {
+  float: right;
+}
+
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2024. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2024. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+.mde-text {
+  overflow-y: scroll;
+  max-width: 878px;
+  height: 430px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--cds-ui-01);
+  border: solid 1px var(--cds-ui-04);
+  position: relative;
+}
+.mde-text .public-DraftEditor-content {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  overflow-y: scroll;
+  max-width: 878px;
+  height: 430px;
+}
+
+.mde-editor-header {
+  background-color: var(--cds-ui-01);
+  border-bottom: 1px solid var(--cds-ui-03);
+  display: flex;
+}
+.mde-editor-header button:focus {
+  outline: 0;
+}
+.mde-editor-header .mde-editor-groups {
+  flex: 2;
+  padding-left: 16px;
+}
+.mde-editor-header .mde-editor-markdown {
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+}
+.mde-editor-header .mde-editor-markdown > div {
+  padding-left: 8px;
+}
+.mde-editor-header ul.mde-header-group {
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+  border-right: 1px solid var(--cds-ui-03);
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item button {
+  text-align: left;
+  cursor: pointer;
+  padding: 4px;
+  margin: 0;
+  border: none;
+  background: none;
+  color: #242729;
+}
+@keyframes tooltip-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item button.tooltipped:hover::before {
+  animation-name: tooltip-appear;
+  animation-duration: 0.2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  position: absolute;
+  z-index: 1000001;
+  width: 0;
+  height: 0;
+  color: rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  content: "";
+  border: 5px solid transparent;
+  top: -5px;
+  right: 50%;
+  bottom: auto;
+  margin-right: -5px;
+  border-top-color: rgba(0, 0, 0, 0.8);
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item button.tooltipped:hover::after {
+  animation-name: tooltip-appear;
+  animation-duration: 0.2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  font-size: 11px;
+  opacity: 0;
+  position: absolute;
+  z-index: 1000000;
+  padding: 5px 8px;
+  color: var(--cds-ui-01);
+  pointer-events: none;
+  content: attr(aria-label);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  right: 50%;
+  bottom: 100%;
+  transform: translateX(50%);
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item button:focus {
+  outline: 2px var(--cds-focus) solid;
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item .headerImage,
+.mde-editor-header ul.mde-header-group li.mde-header-item .boldImage,
+.mde-editor-header ul.mde-header-group li.mde-header-item .italicImage,
+.mde-editor-header ul.mde-header-group li.mde-header-item .subImage,
+.mde-editor-header ul.mde-header-group li.mde-header-item .codeImage,
+.mde-editor-header ul.mde-header-group li.mde-header-item .unorderedListImage,
+.mde-editor-header ul.mde-header-group li.mde-header-item .taskListImage,
+.mde-editor-header ul.mde-header-group li.mde-header-item .orderedListImage,
+.mde-editor-header ul.mde-header-group li.mde-header-item .quoteImage,
+.mde-editor-header ul.mde-header-group li.mde-header-item .linkImage {
+  color: white !important;
+  fill: white !important;
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown {
+  position: absolute;
+  left: -24px;
+  top: 40px;
+  background-color: white;
+  border: 1px solid #c8ccd0;
+  padding: 9px;
+  z-index: 2;
+  transform: translateX(-9px);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li {
+  margin: 0;
+  white-space: nowrap;
+  list-style: none;
+  display: block;
+  margin-left: -9px;
+  margin-right: -9px;
+  padding: 2px;
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li:hover {
+  background: var(--cds-background-brand);
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button {
+  display: block;
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button p {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1em;
+  background: none;
+  border: 0;
+  text-align: left;
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button p:hover {
+  color: #F5F7fA;
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button p.header-1 {
+  height: 25px !important;
+  font-size: 20px !important;
+  font-weight: 300 !important;
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button p.header-2 {
+  height: 23px !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button p.header-3 {
+  height: 20px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button p.header-4 {
+  height: 18px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+  top: -16px;
+  left: 50px;
+  transform: translateX(50%);
+}
+.mde-editor-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-color: white;
+  top: -14px;
+  left: 52px;
+  transform: translateX(50%);
+}
+.mde-editor-header .editDisplayButton.active {
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--cds-background-brand) !important;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-bottom: 2px solid !important;
+  border-bottom-width: 2px !important;
+  border-bottom-color: var(--cds-background-brand) !important;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  width: 125px;
+  text-align: center !important;
+}
+.mde-editor-header .editDisplayButton {
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--cds-text-01) !important;
+  cursor: pointer;
+  width: 125px;
+  text-align: center !important;
+}
+.mde-editor-header .editDisplayButton.focus {
+  outline: 2px var(--cds-focus) solid;
+}
+.mde-editor-header .previewDisplayButton {
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--cds-text-01) !important;
+  cursor: pointer;
+  width: 125px;
+  text-align: center !important;
+}
+.mde-editor-header .previewDisplayButton.active {
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--cds-background-brand) !important;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-bottom: 2px solid !important;
+  border-bottom-width: 2px !important;
+  border-bottom-color: var(--cds-background-brand) !important;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  width: 125px;
+  text-align: center !important;
+}
+.mde-editor-header .previewDisplayButton.focus {
+  outline: 2px var(--cds-focus) solid;
+}
+.mde-editor-header img {
+  height: 16px;
+  width: 16px;
+  margin: 8px;
+}
+.mde-editor-header .unorderedListImage,
+.mde-editor-header .taskListImage,
+.mde-editor-header .orderedListImage {
+  height: 16px;
+  margin-top: 4px;
+}
+.mde-editor-header .boldImage,
+.mde-editor-header .italicImage,
+.mde-editor-header .subImage {
+  margin-bottom: -4px;
+  height: 22px;
+}
+.mde-editor-header .italicImage {
+  margin-left: -1px;
+  margin-right: -1px;
+}
+.mde-editor-header .quoteImage,
+.mde-editor-header .codeImage {
+  margin-bottom: -3px;
+  margin-top: 4px;
+}
+.mde-editor-header .linkImage {
+  margin-top: 4px;
+}
+.mde-editor-header .headerImage {
+  height: 21px;
+  margin-bottom: -4px;
+}
+.mde-editor-header .carbonCarrat {
+  margin-left: 7px;
+}
+.mde-editor-header button:disabled,
+.mde-editor-header button[disabled] {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.DraftEditor-editorContainer {
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+}
+
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2024. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2024. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+.mde-preview .mde-preview-content {
+  padding: 20px 20px 20px 20px;
+  height: 430px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--cds-ui-01);
+  border: solid 1px #DfE3E6;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-y: scroll;
+  word-wrap: break-word;
+}
+.mde-preview .mde-preview-content p, .mde-preview .mde-preview-content blockquote, .mde-preview .mde-preview-content ul, .mde-preview .mde-preview-content dl, .mde-preview .mde-preview-content ol, .mde-preview .mde-preview-content table, .mde-preview .mde-preview-content pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.mde-preview .mde-preview-content ol {
+  list-style-type: decimal;
+}
+.mde-preview .mde-preview-content ul {
+  list-style-type: disc;
+}
+.mde-preview .mde-preview-content h1, .mde-preview .mde-preview-content h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3em;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-preview .mde-preview-content h1 {
+  display: block;
+  font-size: 2em;
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-preview .mde-preview-content h2 {
+  display: block;
+  font-size: 1.5em;
+  -webkit-margin-before: 0.83em;
+  -webkit-margin-after: 0.83em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-preview .mde-preview-content h3 {
+  display: block;
+  font-size: 1.17em;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-preview .mde-preview-content h4 {
+  display: block;
+  -webkit-margin-before: 1.33em;
+  -webkit-margin-after: 1.33em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-preview .mde-preview-content h5 {
+  display: block;
+  font-size: 0.83em;
+  -webkit-margin-before: 1.67em;
+  -webkit-margin-after: 1.67em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-preview .mde-preview-content h6 {
+  display: block;
+  font-size: 0.67em;
+  -webkit-margin-before: 2.33em;
+  -webkit-margin-after: 2.33em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-preview .mde-preview-content ul, .mde-preview .mde-preview-content ol {
+  padding-left: 2em;
+}
+.mde-preview .mde-preview-content blockquote {
+  margin-left: 0;
+  padding: 0 1em;
+  color: #777;
+  border-left: 0.25em solid #ddd;
+}
+.mde-preview .mde-preview-content blockquote > :first-child {
+  margin-top: 0;
+}
+.mde-preview .mde-preview-content blockquote > :last-child {
+  margin-bottom: 0;
+}
+.mde-preview .mde-preview-content code {
+  padding: 0.2em 0;
+  margin: 0;
+  font-size: 90%;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+}
+.mde-preview .mde-preview-content code::before, .mde-preview .mde-preview-content code::after {
+  letter-spacing: -0.2em;
+  content: " ";
+}
+.mde-preview .mde-preview-content pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+.mde-preview .mde-preview-content pre code {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.mde-preview .mde-preview-content pre code::before, .mde-preview .mde-preview-content pre code::after {
+  content: none;
+}
+.mde-preview .mde-preview-content pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.mde-preview .mde-preview-content a {
+  color: var(--cds-background-brand);
+  text-decoration: none;
+}
+.mde-preview .mde-preview-content a:hover {
+  text-decoration: underline;
+}
+.mde-preview .mde-preview-content > *:first-child {
+  margin-top: 0 !important;
+}
+.mde-preview .mde-preview-content > *:last-child {
+  margin-bottom: 0 !important;
+}
+.mde-preview .mde-preview-content::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.mde-preview .mde-preview-content table {
+  display: block;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.mde-preview .mde-preview-content table thead th {
+  font-weight: bold;
+}
+.mde-preview .mde-preview-content table th, .mde-preview .mde-preview-content table td {
+  padding: 6px 13px;
+  border: 1px solid #c8ccd0;
+}
+
+.mde-preview-content {
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2024. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2024. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+.mde-only-preview .mde-only-preview-content {
+  padding: 20px 20px 20px 20px;
+  min-height: 430px;
+  width: 100%;
+  word-wrap: break-word;
+  margin-left: -11px;
+}
+.mde-only-preview .mde-only-preview-content p, .mde-only-preview .mde-only-preview-content blockquote, .mde-only-preview .mde-only-preview-content ul, .mde-only-preview .mde-only-preview-content ol, .mde-only-preview .mde-only-preview-content dl, .mde-only-preview .mde-only-preview-content table, .mde-only-preview .mde-only-preview-content pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.mde-only-preview .mde-only-preview-content ol {
+  list-style-type: decimal;
+}
+.mde-only-preview .mde-only-preview-content ul {
+  list-style-type: disc;
+}
+.mde-only-preview .mde-only-preview-content h1, .mde-only-preview .mde-only-preview-content h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3em;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-only-preview .mde-only-preview-content h1 {
+  display: block;
+  font-size: 2em;
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-only-preview .mde-only-preview-content h2 {
+  display: block;
+  font-size: 1.5em;
+  -webkit-margin-before: 0.83em;
+  -webkit-margin-after: 0.83em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-only-preview .mde-only-preview-content h3 {
+  display: block;
+  font-size: 1.17em;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-only-preview .mde-only-preview-content h4 {
+  display: block;
+  -webkit-margin-before: 1.33em;
+  -webkit-margin-after: 1.33em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-only-preview .mde-only-preview-content h5 {
+  display: block;
+  font-size: 0.83em;
+  -webkit-margin-before: 1.67em;
+  -webkit-margin-after: 1.67em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-only-preview .mde-only-preview-content h6 {
+  display: block;
+  font-size: 0.67em;
+  -webkit-margin-before: 2.33em;
+  -webkit-margin-after: 2.33em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+.mde-only-preview .mde-only-preview-content ul, .mde-only-preview .mde-only-preview-content ol {
+  padding-left: 2em;
+}
+.mde-only-preview .mde-only-preview-content blockquote {
+  margin-left: 0;
+  padding: 0 1em;
+  color: #777;
+  border-left: 0.25em solid #ddd;
+}
+.mde-only-preview .mde-only-preview-content blockquote > :first-child {
+  margin-top: 0;
+}
+.mde-only-preview .mde-only-preview-content blockquote > :last-child {
+  margin-bottom: 0;
+}
+.mde-only-preview .mde-only-preview-content code {
+  padding: 0.2em 0;
+  margin: 0;
+  font-size: 90%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.mde-only-preview .mde-only-preview-content code::before, .mde-only-preview .mde-only-preview-content code::after {
+  letter-spacing: -0.2em;
+  content: " ";
+}
+.mde-only-preview .mde-only-preview-content pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+.mde-only-preview .mde-only-preview-content pre code {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.mde-only-preview .mde-only-preview-content pre code::before, .mde-only-preview .mde-only-preview-content pre code::after {
+  content: none;
+}
+.mde-only-preview .mde-only-preview-content pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.mde-only-preview .mde-only-preview-content a {
+  color: var(--cds-background-brand);
+  text-decoration: none;
+}
+.mde-only-preview .mde-only-preview-content a:hover {
+  text-decoration: underline;
+}
+.mde-only-preview .mde-only-preview-content > *:first-child {
+  margin-top: 0 !important;
+}
+.mde-only-preview .mde-only-preview-content > *:last-child {
+  margin-bottom: 0 !important;
+}
+.mde-only-preview .mde-only-preview-content::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.mde-only-preview .mde-only-preview-content table {
+  display: block;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.mde-only-preview .mde-only-preview-content table thead th {
+  font-weight: bold;
+}
+.mde-only-preview .mde-only-preview-content table th, .mde-only-preview .mde-only-preview-content table td {
+  padding: 6px 13px;
+  border: 1px solid #c8ccd0;
+}
+
+.mde-preview-content {
+  font-family: "IBM Plex Sans", ibm-plex-sans, "Helvetica Neue for IBM", "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2024. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2024. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2024. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2024. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+.react-mde-no-preview-layout .mde-text {
+  border-bottom: none;
+}
+
+/*# sourceMappingURL=react-mde-all.css.map */

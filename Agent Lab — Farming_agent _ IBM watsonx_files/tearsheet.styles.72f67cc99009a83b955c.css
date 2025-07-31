@@ -1,0 +1,86 @@
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+.dap-tearsheet-container {
+  height: 100%;
+  width: calc(100% - 128px);
+  max-height: calc(100% - 48px);
+  transform: translate3d(0, 500px, 0);
+  transition: transform 240ms cubic-bezier(0, 0, 0.3, 1), max-height 240ms cubic-bezier(0, 0, 0.3, 1);
+}
+.dap-tearsheet-container > .cds--modal-content > .cds--modal {
+  transform: translate(-32px, -48px);
+}
+.dap-tearsheet-container.narrow {
+  width: 480px;
+}
+.dap-tearsheet-container.hideCloseButton .cds--modal-container-body > .cds--modal-header > .cds--modal-close-button {
+  display: none;
+}
+
+.dap-tearsheet-container-stacked {
+  max-height: calc(100% - 64px);
+  width: calc(100% - 96px);
+}
+.dap-tearsheet-container-stacked > .cds--modal-content > .cds--modal {
+  transform: translate(-16px, -56px);
+}
+
+.dap-tearsheet-container-double-stacked {
+  max-height: calc(100% - 80px);
+  width: calc(100% - 64px);
+}
+.dap-tearsheet-container-double-stacked > .cds--modal-content > .cds--modal {
+  transform: translate(0, -64px);
+}
+
+.dap-tearsheet-container-clear-bookmarks {
+  max-height: calc(100% - 88px);
+}
+.dap-tearsheet-container-clear-bookmarks > .cds--modal-content > .cds--modal {
+  transform: translate(-32px, -88px);
+}
+.dap-tearsheet-container-clear-bookmarks.dap-tearsheet-container-stacked {
+  max-height: calc(100% - 104px);
+}
+.dap-tearsheet-container-clear-bookmarks.dap-tearsheet-container-stacked > .cds--modal-content > .cds--modal {
+  transform: translate(-16px, -104px);
+}
+.dap-tearsheet-container-clear-bookmarks.dap-tearsheet-container-double-stacked {
+  max-height: calc(100% - 120px);
+}
+.dap-tearsheet-container-clear-bookmarks.dap-tearsheet-container-double-stacked > .cds--modal-content > .cds--modal {
+  transform: translate(0, -120px);
+}
+
+.dap-tearsheet {
+  align-items: flex-end;
+}
+.dap-tearsheet .header.headerBleed {
+  padding: 0;
+  margin: 0;
+}
+.dap-tearsheet .body {
+  display: flex;
+}
+.dap-tearsheet .body.bleed {
+  padding: 0;
+  margin: 0;
+}
+.dap-tearsheet .body .loadingContainer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1000;
+}
+.dap-tearsheet .body iframe {
+  flex-grow: 1;
+  padding-bottom: 0;
+}
